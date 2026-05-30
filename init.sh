@@ -1,3 +1,24 @@
+#!/bin/bash
+
+set -e
+
+echo "== Init dotfiles workspace =="
+
+mkdir -p \
+bootstrap \
+config/i3 \
+config/fcitx5 \
+config/rofi \
+config/zsh \
+config/tmux \
+config/git \
+scripts \
+bin \
+docs \
+packages
+
+# README
+cat > README.md << 'EOF'
 # My Desk (Dotfiles)
 
 ## 目标
@@ -21,3 +42,5 @@ git clone https://github.com/Stronglittleboy/my_desk.git
 cd my_desk
 bash bootstrap/ubuntu.sh
 ````
+EOF
+
